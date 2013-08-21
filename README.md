@@ -3,6 +3,29 @@
 
 JavaScriptInitializationManager
 
-Tiny JS-library performs initialization function calls for any blocks.
+Small JS-library performs adjourned js-function calls.
 
 Requires jQuery.
+
+
+Example:
+ _____________________________________________________________________
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
+|                                                                     |
