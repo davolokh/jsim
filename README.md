@@ -14,7 +14,12 @@ HTML5 data-attributes used for defining names, call types and parameters.
 **Example:**
 
 ````html
-<div id="js-graceful-block" data-type="ready" data-function="gracefulMethod" data-param="#blockName">
+<div id="js-graceful-block" data-type="ready" data-function="gracefulMethod" data-param="#blockId">
+   
+   ...
+   
+</div>
+<div id="js-graceful-media" data-type="load" data-function="gracefulMethodForMedia" data-param="#mediaBlockId">
    
    ...
    
@@ -26,6 +31,9 @@ HTML5 data-attributes used for defining names, call types and parameters.
 
 ````js
 $(document).ready(function() {
- appNameSpace.gracefulMethod("#blockName");
+ appNameSpace.gracefulMethod("#blockId");
+});
+$(document).load(function() {
+ appNameSpace.gracefulMethodForMedia("#mediaBlockId");
 });
 ````
