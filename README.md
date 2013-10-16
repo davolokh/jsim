@@ -14,15 +14,15 @@ HTML5 data-attributes used for defining names, call types and parameters.
 **Example:**
 
 ````html
-<div id="js-graceful-block" data-type="ready" data-function="gracefulMethod" data-param="#blockId">
-   
+<div id="js-graceful-block" data-init="ready" data-function="appNamespace.gracefulMethod" data-params="#blockId">
+
    ...
-   
+
 </div>
-<div id="js-graceful-media" data-type="load" data-function="gracefulMethodForMedia" data-param="#mediaBlockId">
-   
+<div id="js-graceful-media" data-init="load" data-function="appNamespace.magicModule.gracefulMethodForMedia" data-params="#mediaBlockId,#mediaBlockid2">
+
    ...
-   
+
 </div>
 ````
 
@@ -31,9 +31,9 @@ HTML5 data-attributes used for defining names, call types and parameters.
 
 ````js
 $(document).ready(function() {
- appNameSpace.gracefulMethod("#blockId");
+ appNamespace.gracefulMethod("#blockId");
 });
 $(document).load(function() {
- appNameSpace.gracefulMethodForMedia("#mediaBlockId");
+ appNamespace.magicModule.gracefulMethodForMedia(#mediaBlockId, #mediaBlockid2)
 });
 ````
