@@ -7,7 +7,7 @@ Small JS-library performs adjourned js-function calls.
 
 Requires jQuery.
 
-Library allows to make deffered function calls (ready/load events). Usefull for cases, when all js-files are included in page footer and page is combination of reusable blocks.
+Library allows to make deffered function calls (ready/load events). Usefull for cases, when all js-files are included in page's footer and the page is combination of reusable blocks.
 HTML5 data-attributes used for defining names, call types and parameters.
 
 
