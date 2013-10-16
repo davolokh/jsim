@@ -34,6 +34,6 @@ $(document).ready(function() {
  appNamespace.gracefulMethod("#blockId");
 });
 $(document).load(function() {
- appNamespace.magicModule.gracefulMethodForMedia(#mediaBlockId, #mediaBlockid2)
+ appNamespace.magicModule.gracefulMethodForMedia("#mediaBlockId", "#mediaBlockid2")
 });
 ````
