@@ -52,13 +52,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 	 */
 	var performInit = function($domElements) {
 		$domElements.each(function() {
-			var $element = $(this);
-			var fullQualifiedName = $.data($element, FUNCTION).split(".");
-		    var functionName = fullQualifiedName.pop();
-		    var namespace = fullQualifiedName.join('.');
+			var $element = $(this),
+				fullQualifiedName = $element.data(FUNCTION).split(".");
+		    	functionName = fullQualifiedName.pop(),
+		    	namespace = fullQualifiedName.join('.');
 		    if (!namespace) { namespace = 'window'; }
 		    var namespaceObject = eval(namespace);
-		    namespaceObject[functionName].apply(namespaceObject, $.data($element, PARAMETERS).split(","));
+		    namespaceObject[functionName].apply(namespaceObject, $element.data(PARAMETERS).split(","));
 		});
 	};
   

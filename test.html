@@ -5,7 +5,29 @@
 	<title>JSIM test</title>
 </head>
 <body>
+
+	<div id="js-graceful-block" data-init="ready" data-function="appNamespace.gracefulMethod" data-params="#block1_1">
+		<span id="block1_1"></span>
+	</div>
+	
+	<div id="js-graceful-media" data-init="load" data-function="appNamespace.gracefulMethodForMedia" data-params="#block2_1,#block2_2">
+		<!-- <img src="link_to_slow_loading_image" alt="Really slow loading image"> -->
+		<span id="block2_1"></span>
+		<br>
+		<span id="block2_2"></span>
+	</div>
+
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 	<script src="jsim.js" type="text/javascript"></script>
+	<script>
+		var appNamespace = appNamespace || {};
+		appNamespace.gracefulMethod = function gracefulMethod(selector) {
+			$(selector).html("appNamespace.gracefulMethod was called for " + selector);
+		}
+		appNamespace.gracefulMethodForMedia = function gracefulMethodForMedia(selector1, selector2) {
+			$(selector1).html("appNamespace.gracefulMethodForMedia was called for " + selector1);
+			$(selector2).html("appNamespace.gracefulMethodForMedia was called for " + selector2);
+		}
+	</script>
 </body>
 </html>
